@@ -1,0 +1,325 @@
+/* Styles for burger Joint */
+/**
+* COLOR NOTES:
+*   ORANGE: #f17137;
+*
+*   ACTIVE/WIDGET BLUE: #0076bb;
+*   BG GRAY: #f2f2f2;
+*   CHECKBOX STROKE TEAL: #bcc2c9;
+*   FIELD BORDER COLOR: #808080;
+*
+*   LIGHTer GRAY TEXT: #CCCCCC;
+*   LIGHT GRAY TEXT: #999999;
+*   DARK TEXT BROWN: #393c3f;
+*   BLACK: #000000;
+*/
+
+@import './fonts/fonts.css';
+
+.uni { font-family: 'universcond' }
+
+.monlt { font-family: 'montserratlt' }
+
+.monreg { font-family: 'montserratreg' }
+
+body {
+    font-size: 13px;
+    font-family: 'montserratreg';
+}
+
+body, p {
+    color: #393c3f;
+}
+
+footer {
+    font-size: 12px;
+}
+
+.secure-ribbon p, .secure-ribbon p a {
+    color: #999999;
+}
+
+.secure-ribbon p a {
+    text-decoration: underline;
+}
+
+a, a:hover, a:focus, a:active {
+    color: #f17137;
+}
+
+a .fa {
+    font-family: fontawesome;
+}
+
+.jumbotron {
+    background-size: cover;
+    display: block;
+    /* color: white; */
+    height: 10vh;
+    text-align: center;
+    padding: .5rem 0;
+    background: none;
+}
+
+.jumbotron h1 {
+    position: relative;
+    /* top: 66.66%; */
+    /* transform: translateY(100%); */
+    /* display: inline-block; */
+}
+
+.jumbotron #fl-logo {
+    width: 90%;
+    display: block;
+    height: 100%;
+    padding-top: 1%;
+}
+
+.jumbotron .cta {
+    font-size: 12px;
+    display: inline-block;
+    padding-top: 10%;
+    text-transform: uppercase;
+}
+
+.jumbotron .container {
+    overflow: hidden;
+}
+
+.nav-link {
+    width: 33.333%;
+    text-align: center;
+    position: relative;
+}
+
+.nav-link:first-child {
+    padding-right: 16%;
+}
+
+.nav-link:last-child {
+    padding-left: 16%;
+}
+
+.nav-link:first-child p {
+    left: 33.33%;
+}
+
+.nav-link:last-child p {
+    left: 66.66%;
+}
+
+.nav-link .circle {
+    background: #CCCCCC;
+    color: white;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.nav-link.active .circle {
+    background: #f17137;
+}
+
+.nav-link p {
+    font-size: 0.8em;
+    white-space: nowrap;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 90%;
+    left: 50%;
+}
+
+.nav-link:after {
+    content: ' ';
+    border-bottom: 1px solid #CCCCCC;
+    width: 90%;
+    height: 1px;
+    display: block;
+    transform: translate(50%,0);
+    position: absolute;
+    left: 18%;
+    top: 50%;
+    z-index: -1;
+}
+
+.nav-link:first-child:after {
+    left: 0.33%;
+}
+
+/* .nav-link:last-child:after {
+    left: 66.66%;
+} */
+
+.nav-link:last-child:after {
+    border: 0 !important;
+}
+
+#main {
+    padding: 2.3rem 2rem;
+}
+
+.page-title {
+    font-size: 2.3em;
+    margin-bottom: 1rem;
+}
+
+.form-control, .custom-select {
+    width: fit-content;
+    border-color: #808080;
+}
+
+.custom-select {
+    min-width: 75%;
+}
+
+label[for="industry"] {
+    display: block;
+}
+
+.form-control::placeholder {
+    color: #CCCCCC !important;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #CCCCCC !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #CCCCCC !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #CCCCCC !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #CCCCCC !important;
+}
+
+.form-control:focus, 
+.form-control:active {
+    outline: none !important;
+    border-color: #0076bb;
+    box-shadow: none;
+}
+
+.form-group .text-muted, 
+.form-group .text-muted a,
+.form-group .text-muted a:hover,
+.form-group .text-blue {
+    color:  #0076bb!important;
+    transition: color 300ms;
+}
+
+.help-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms;
+    position: absolute;
+}
+
+.help-text.show-help {
+    visibility: visible;
+    opacity: 1;
+}
+
+.custom-control-input:focus~.custom-control-label::before {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.custom-control-label {
+    margin-left: 1.6rem;
+    line-height: 2;
+}
+
+.custom-control-label::before {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: white;
+    border: 1px solid #CCCCCC;
+}
+
+.custom-control-label::after {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.btn-primary {
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 2em;
+}
+
+.btn-primary, 
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active {
+    background-color: #f17137;
+    border-color: #f17137;
+}
+
+.trust-wrapper {
+    text-align: center;
+}
+
+.trust-badge img {
+    max-width: 100%;
+    max-height: 56px;
+}
+
+.trust-badge span {
+    color: #999999;
+}
+
+.trust-wrapper .trust-badge:last-child {
+    margin-left: -16px;
+    margin-right: 16px;
+}
+
+.law-text p, .law-text p a {
+    color: #999999;
+}
+
+.law-text p a {
+    text-decoration: underline;
+}
+
+.mssgOutput {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.mssgOutput.success {
+    background: yellowgreen;
+    color: white;
+}
+
+.mssgOutput.error {
+    background: red;
+    color: white;
+}
+
+.mssgOutput.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.display-toggle-wrapper {
+    transition: 300ms;
+}
+
+.no-show {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}
