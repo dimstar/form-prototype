@@ -8,7 +8,8 @@ module.exports = {
             let handlebars = {
                 stepOne: 'active',
                 nextStep: '/activate/business-information',
-                continueButton: 'Activate Account'
+                continueButton: 'Activate Account',
+                directFlow: true
             }
             cb(handlebars);
         });
@@ -19,7 +20,8 @@ module.exports = {
             let handlebars = {
                 stepTwo: 'active',
                 nextStep: '/activate/get-results',
-                continueButton: 'Continue'
+                continueButton: 'Continue',
+                directFlow: true
             }
             cb(handlebars);
         });
@@ -30,9 +32,20 @@ module.exports = {
             let handlebars = {
                 stepThree: 'active',
                 nextStep: '/activate/results',
-                continueButton: 'Get Results'
+                continueButton: 'Get Results',
+                directFlow: true
             }
             cb(handlebars);
         });
+    },
+    selfOne: function(cb){
+        applicant.form((data)=>{
+            let handlebars = {
+                stepOne: 'active',
+                nextStep: '/merchant/business-information',
+                continueButton: 'Get Results',
+                directFlow: true
+            }
+        })
     }
 }

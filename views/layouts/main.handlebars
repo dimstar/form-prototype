@@ -22,7 +22,11 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    {{> page/nav}}
+                    {{#if directFlow}}
+                        {{> page/nav}}
+                    {{else}}
+                        {{> page/navss}}
+                    {{/if}}
                 </div>
             </div>
         </div>
