@@ -8,7 +8,7 @@ module.exports = {
         app.set('view engine', 'handlebars');
 
         // begin the actual routing and handoff to the views
-        // Direct
+        // Direct routes
         app.get('/activate/activate-account', this.stepOne );
         app.get('/activate/business-information', this.stepTwo );
         app.get('/activate/get-results', this.stepThree );

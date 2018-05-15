@@ -42,10 +42,33 @@ module.exports = {
         applicant.form((data)=>{
             let handlebars = {
                 stepOne: 'active',
-                nextStep: '/merchant/business-information',
-                continueButton: 'Get Results',
-                directFlow: true
+                nextStep: '/merchant/get-results',
+                continueButton: 'Continue',
+                directFlow: false
             }
+            cb(handlebars);
         })
-    }
+    },
+    selfTwo: function(cb){
+        applicant.form((data)=>{
+            let handlebars = {
+                stepTwo: 'active',
+                nextStep: '/merchant/results',
+                continueButton: 'Get Results',
+                directFlow: false
+            }
+            cb(handlebars);
+        })
+    },
+    selfResults: function(cb){
+        applicant.form((data)=>{
+            let handlebars = {
+                stepTwo: 'active',
+                nextStep: '',
+                continueButton: 'Continue',
+                directFlow: false
+            }
+            cb(handlebars);
+        })
+    },
 }

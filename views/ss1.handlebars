@@ -1,0 +1,154 @@
+<div class="col-sm">
+    <h1 class="uni page-title">WE HAVE A FEW MORE QUESTIONS</h1>
+    <form>
+        <div class="form-group">
+            <label for="businessTime">Time in Business</label>
+            <select id="businessTime" class="form-control custom-select custom-select-md">
+                <option selected>Select</option>
+                <option value="1">1 Year</option>
+                <option value="2">2 Years</option>
+                <option value="3">3 Years</option>
+                <option value="4">4 Years</option>
+                <option value="5">5 Years</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="annualRevenue">Annual Revenue</label>
+            <select id="annualRevenue" class="form-control custom-select custom-select-md">
+                <option selected>Select</option>
+                <option value="1">-25 m/year</option>
+                <option value="2">25-30 m/year</option>
+                <option value="3">50 m/year</option>
+                <option value="4">60 m/year</option>
+                <option value="5">+75 m/year</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="amountRequested">Amount Requested</label>
+            <input 
+                type="tel" 
+                class="form-control" 
+                id="amountRequested" 
+                maxlength="12" 
+                size="12"
+                placeholder="$">
+                {{!-- <small id="amountRequested" class="form-text text-muted help-text">Please read our <a href="#">Terms and Conditions and Privacy Policy</a></small> --}}
+        </div>
+        <div class="form-group">
+            <label for="industry">Industry</label>
+            <select id="industry" class="form-control custom-select custom-select-md">
+                <option selected>Select</option>
+                <option value="1">Finance</option>
+                <option value="2">Automotive</option>
+                <option value="3">Creative</option>
+                <option value="4">Manufacturing</option>
+                <option value="5">Sales</option>
+                <option value="6">Marketing</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="businessName">Business Name</label>
+            <input 
+                type="text" 
+                class="form-control w-100" 
+                id="businessName"
+                placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="ownerName">Owner's Name</label>
+            <input 
+                type="text" 
+                class="form-control w-100" 
+                id="ownerName"
+                placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="businessNameSame">Do you do business under a different name?</label>
+            <div id="businessNameSame" class="custom-control custom-checkbox">
+                <div class="form-row">
+                    <div class="col">
+                        <input data-showwhat="dba-wrapper" type="checkbox" class="custom-control-input" id="yesBusinessName">
+                        <label class="custom-control-label" for="yesBusinessName">Yes</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" class="custom-control-input" id="noBusinessName">
+                        <label class="custom-control-label" for="noBusinessName">No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dba-wrapper" class="form-group display-toggle-wrapper no-show">
+            <label for="businessDba">What is your legal business name (DBA)?</label>
+            <input 
+                type="text" 
+                class="form-control w-100" 
+                id="businessDba"
+                placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="businessAdress">Business Address</label>
+            <input 
+                type="text" 
+                class="form-control w-100" 
+                id="businessAdress"
+                placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="businessAdressSame">Is your business address the same as your Home address?</label>
+            <div id="businessAddressSame" class="custom-control custom-checkbox">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="checkbox" class="custom-control-input" id="yesAddrSame">
+                        <label class="custom-control-label" for="yesAddrSame">Yes</label>
+                    </div>
+                    <div class="col">
+                        <input data-showwhat="home-addr" type="checkbox" class="custom-control-input" id="noAddrSame">
+                        <label class="custom-control-label" for="noAddrSame">No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="home-addr" class="form-group display-toggle-wrapper no-show">
+            <label for="homeAdress">Home Address</label>
+            <input 
+                type="text" 
+                class="form-control w-100" 
+                id="homeAdress"
+                placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="businessTakeCc">Does your business accept credit cards?</label>
+            <div id="businessTakeCc" class="custom-control custom-checkbox">
+                <div class="form-row">
+                    <div class="col">
+                        <input data-showwhat="homeaddr-wrapper" type="checkbox" class="custom-control-input" id="yesCc">
+                        <label class="custom-control-label" for="yesCc">Yes</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" class="custom-control-input" id="noCc">
+                        <label class="custom-control-label" for="noCc">No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="homeaddr-wrapper" class="display-toggle-wrapper no-show">
+            <div class="form-group">
+                <label for="maxCreditReceipts">Average monthly credit card receipts in the last 3 months:</label>
+                <input 
+                    type="text" 
+                    class="form-control w-100" 
+                    id="maxCreditReceipts"
+                    placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="minCreditReceipts">Lowest monthly credit card receipts in the last 3 months:</label>
+                <input 
+                    type="text" 
+                    class="form-control w-100" 
+                    id="minCreditReceipts"
+                    placeholder="">
+            </div>
+        </div>
+    </form>
+</div>
+    

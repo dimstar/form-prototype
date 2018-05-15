@@ -4,31 +4,33 @@ const exphbs = require('express-handlebars');
 module.exports = {
     init: function(app){
         // handlebar middleware
-        // app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-        // app.set('view engine', 'handlebars');
+        app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+        app.set('view engine', 'handlebars');
 
         // begin the actual routing and handoff to the views
-        // app.get('/', this.stepOne );
-        // app.get('/more-questions', this.stepTwo );
-        // app.get('/get-your-results', this.stepThree );
+        // self serve routes
+        app.get('/merchant/business-information', this.ssOne );
+        app.get('/merchant/get-results', this.ssTwo );
+        app.get('/merchant/results', this.ssResults );
         
     },
-    stepOne: function(request, response){
-        applicantController.firstStep(function(renderData){
+    ssOne: function(request, response){
+        console.log('what?')
+        applicantController.selfOne(function(renderData){
             console.log(renderData)
-            response.render('step1', renderData);
+            response.render('ss1', renderData);
         });
     },
-    stepTwo: function(request, response){
-        applicantController.secondStep(function(renderData){
+    ssTwo: function(request, response){
+        applicantController.selfTwo(function(renderData){
             console.log(renderData)
-            response.render('step2', renderData);
+            response.render('ss2', renderData);
         });
     },
-    stepThree: function(request, response){
-        applicantController.thirdStep(function(renderData){
+    ssResults: function(request, response){
+        applicantController.selfResults(function(renderData){
             console.log(renderData)
-            response.render('step3', renderData);
+            response.render('ss3', renderData);
         });
     }
 }

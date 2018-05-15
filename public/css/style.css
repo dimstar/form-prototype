@@ -92,6 +92,10 @@ a .fa {
     position: relative;
 }
 
+.nav-half .nav-link {
+    width: 50%;
+}
+
 .nav-link:first-child {
     padding-right: 16%;
 }
@@ -146,8 +150,16 @@ a .fa {
     z-index: -1;
 }
 
+.nav-half .nav-link:after {
+    width: 100%;
+}
+
 .nav-link:first-child:after {
     left: 0.33%;
+}
+
+.nav-half .nav-link:first-child:after {
+    left: 0.5%;
 }
 
 /* .nav-link:last-child:after {

@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 dmRouter.init(app);
+ssRouter.init(app);
 
 //listen
 app.listen( PORT, () => console.log(`Rolling on PORT: ${PORT}!`))
