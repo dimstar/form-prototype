@@ -26,7 +26,7 @@
         <div class="form-group">
             <label for="amountRequested">Amount Requested</label>
             <input 
-                type="text" 
+                type="tel" 
                 class="form-control" 
                 id="amountRequested" 
                 maxlength="12" 
@@ -63,8 +63,8 @@
                 placeholder="">
         </div>
         <div class="form-group">
-            <label for="businessAdressSame">Do you do business under a different name?</label>
-            <div id="businessAddressSame" class="custom-control custom-checkbox">
+            <label for="businessNameSame">Do you do business under a different name?</label>
+            <div id="businessNameSame" class="custom-control custom-checkbox">
                 <div class="form-row">
                     <div class="col">
                         <input data-showwhat="dba-wrapper" type="checkbox" class="custom-control-input" id="yesBusinessName">
@@ -78,11 +78,11 @@
             </div>
         </div>
         <div id="dba-wrapper" class="form-group display-toggle-wrapper no-show">
-            <label for="businessAdress">What is your legal business name (DBA)?</label>
+            <label for="businessDba">What is your legal business name (DBA)?</label>
             <input 
                 type="text" 
                 class="form-control w-100" 
-                id="businessAdress"
+                id="businessDba"
                 placeholder="">
         </div>
         <div class="form-group">
@@ -98,22 +98,30 @@
             <div id="businessAddressSame" class="custom-control custom-checkbox">
                 <div class="form-row">
                     <div class="col">
-                        <input type="checkbox" class="custom-control-input" id="yesSame">
-                        <label class="custom-control-label" for="yesSame">Yes</label>
+                        <input type="checkbox" class="custom-control-input" id="yesAddrSame">
+                        <label class="custom-control-label" for="yesAddrSame">Yes</label>
                     </div>
                     <div class="col">
-                        <input type="checkbox" class="custom-control-input" id="notSame">
-                        <label class="custom-control-label" for="notSame">No</label>
+                        <input data-showwhat="home-addr" type="checkbox" class="custom-control-input" id="noAddrSame">
+                        <label class="custom-control-label" for="noAddrSame">No</label>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="home-addr" class="form-group display-toggle-wrapper no-show">
+            <label for="homeAdress">Home Address</label>
+            <input 
+                type="text" 
+                class="form-control w-100" 
+                id="homeAdress"
+                placeholder="">
+        </div>
         <div class="form-group">
-            <label for="businessAdressSame">Does your business accept credit cards?</label>
-            <div id="businessAddressSame" class="custom-control custom-checkbox">
+            <label for="businessTakeCc">Does your business accept credit cards?</label>
+            <div id="businessTakeCc" class="custom-control custom-checkbox">
                 <div class="form-row">
                     <div class="col">
-                        <input type="checkbox" class="custom-control-input" id="yesCc">
+                        <input data-showwhat="homeaddr-wrapper" type="checkbox" class="custom-control-input" id="yesCc">
                         <label class="custom-control-label" for="yesCc">Yes</label>
                     </div>
                     <div class="col">
@@ -121,6 +129,24 @@
                         <label class="custom-control-label" for="noCc">No</label>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="homeaddr-wrapper" class="display-toggle-wrapper no-show">
+            <div class="form-group">
+                <label for="maxCreditReceipts">Average monthly credit card receipts in the last 3 months:</label>
+                <input 
+                    type="text" 
+                    class="form-control w-100" 
+                    id="maxCreditReceipts"
+                    placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="minCreditReceipts">Lowest monthly credit card receipts in the last 3 months:</label>
+                <input 
+                    type="text" 
+                    class="form-control w-100" 
+                    id="minCreditReceipts"
+                    placeholder="">
             </div>
         </div>
     </form>

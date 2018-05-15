@@ -8,9 +8,11 @@ module.exports = {
         app.set('view engine', 'handlebars');
 
         // begin the actual routing and handoff to the views
-        app.get('/', this.stepOne );
-        app.get('/more-questions', this.stepTwo );
-        app.get('/get-your-results', this.stepThree );
+        // Direct
+        app.get('/activate/activate-account', this.stepOne );
+        app.get('/activate/business-information', this.stepTwo );
+        app.get('/activate/get-results', this.stepThree );
+        app.get('/activate/results', this.stepFour );
         
     },
     stepOne: function(request, response){
@@ -29,6 +31,12 @@ module.exports = {
         applicantController.thirdStep(function(renderData){
             console.log(renderData)
             response.render('step3', renderData);
+        });
+    },
+    stepFour: function(request, response){
+        applicantController.thirdStep(function(renderData){
+            console.log(renderData)
+            response.render('step4', renderData);
         });
     }
 }

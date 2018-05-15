@@ -15,11 +15,23 @@ let FLAP = {
          
         $('#yesBusinessName').on('change', function(){
             FLAP.toggleDisplayRelative(this);
-            
         });
+
+        $('#noAddrSame').on('change', function(){
+            FLAP.toggleDisplayRelative(this);
+        });
+
+        $('#yesCc').on('change', function(){
+            FLAP.toggleDisplayRelative(this);
+        });
+
+        $('.custom-checkbox').on('change', function(){
+            FLAP.thereCanBeOnlyOne(this);
+        } );
 
         $("#activationCode").inputmask({"mask": "9999 9999 9999 9999", "placeholder": " "});
         $("#businessZip").inputmask({"mask": "99999", "placeholder": " "});
+        $("#businessPhone").inputmask({"mask": "(999) 999-9999", "placeholder": " "});
         $("#taxId").inputmask({"mask": "999 99 9999", "placeholder": " "});
         $("#ownrSocial").inputmask({"mask": "999 99 9999", "placeholder": " "});
     },
@@ -44,6 +56,14 @@ let FLAP = {
         $this = $(el);
         var this_relative_to_display = $this.attr('data-showwhat');
         $(`#${this_relative_to_display}`).toggleClass('no-show');
+    },
+    thereCanBeOnlyOne: function(parent){
+        var unchecked = $(parent).find('[type="checkbox"]:not(:checked)');
+        var checked = $(parent).find('[type="checkbox"]:checked');
+        unchecked.attr('disabled', true);
+        if(checked.length === 0){
+            $(parent).find('[type="checkbox"]').attr('disabled', false);
+        }
     }
 }
 

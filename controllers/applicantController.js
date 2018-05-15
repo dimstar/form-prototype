@@ -7,7 +7,8 @@ module.exports = {
             log('form data: ', data);
             let handlebars = {
                 stepOne: 'active',
-                nextStep: '/more-questions'
+                nextStep: '/activate/business-information',
+                continueButton: 'Activate Account'
             }
             cb(handlebars);
         });
@@ -17,7 +18,8 @@ module.exports = {
             log('form data: ', data);
             let handlebars = {
                 stepTwo: 'active',
-                nextStep: '/get-your-results'
+                nextStep: '/activate/get-results',
+                continueButton: 'Continue'
             }
             cb(handlebars);
         });
@@ -27,7 +29,8 @@ module.exports = {
             log('form data: ', data);
             let handlebars = {
                 stepThree: 'active',
-                nextStep: ''
+                nextStep: '/activate/results',
+                continueButton: 'Get Results'
             }
             cb(handlebars);
         });

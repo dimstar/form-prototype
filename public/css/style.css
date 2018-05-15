@@ -76,7 +76,7 @@ a .fa {
 }
 
 .jumbotron .cta {
-    font-size: 12px;
+    font-size: 13px;
     display: inline-block;
     padding-top: 10%;
     text-transform: uppercase;
@@ -101,7 +101,7 @@ a .fa {
 }
 
 .nav-link:first-child p {
-    left: 33.33%;
+    left: 34.33%;
 }
 
 .nav-link:last-child p {
@@ -159,7 +159,7 @@ a .fa {
 }
 
 #main {
-    padding: 2.3rem 2rem;
+    padding: 2.6rem 2rem;
 }
 
 .page-title {
@@ -256,12 +256,20 @@ label[for="industry"] {
     margin-bottom: 2em;
 }
 
+.form-group label {
+    font-size: 1.1em;
+}
+
 .btn-primary, 
 .btn-primary:hover, 
 .btn-primary:focus, 
 .btn-primary:active {
     background-color: #f17137;
+    width: fit-content;
     border-color: #f17137;
+    min-width: 100%;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
 }
 
 .trust-wrapper {
@@ -322,4 +330,9 @@ label[for="industry"] {
     visibility: hidden;
     height: 0;
     margin: 0;
+}
+
+#owernDob {
+    min-width: 160px;
+    min-height: 38px;
 }
