@@ -1,26 +1,28 @@
 <div class="col-sm">
-    <h1 class="uni page-title">WE HAVE A FEW MORE QUESTIONS</h1>
+    <h1 class="uni page-title">LET’S GROW YOUR BUSINESS.</h1>
     <form>
         <div class="form-group">
             <label for="businessTime">Time in Business</label>
             <select id="businessTime" class="form-control custom-select custom-select-md">
-                <option selected>Select</option>
-                <option value="1">1 Year</option>
-                <option value="2">2 Years</option>
-                <option value="3">3 Years</option>
-                <option value="4">4 Years</option>
-                <option value="5">5 Years</option>
+                <option disabled selected value="">Select</option>
+                <option value="-1">Less than 1 year</option>
+                <option value="1-2">1 – 2 years</option>
+                <option value="2-3">Greater than 2 – 3 years</option>
+                <option value="3-5">Greater 3 – 5 years</option>
+                <option value="5-10">Greater than 5 – 10 years</option>
+                <option value="10+">More than 10 years</option>
             </select>
         </div>
         <div class="form-group">
             <label for="annualRevenue">Annual Revenue</label>
             <select id="annualRevenue" class="form-control custom-select custom-select-md">
-                <option selected>Select</option>
-                <option value="1">-25 m/year</option>
-                <option value="2">25-30 m/year</option>
-                <option value="3">50 m/year</option>
-                <option value="4">60 m/year</option>
-                <option value="5">+75 m/year</option>
+                <option disabled selected value="">Select</option>
+                <option value="-74k">Less than $74,999</option>
+                <option value="75-99k">$75,000 to $99,999</option>
+                <option value="100-299k">$100,000 to $299,999</option>
+                <option value="300-499k">$300,000 to $499,999</option>
+                <option value="500-999k">$500,000 to $999,999</option>
+                <option value="1m+">Greater than $1 million</option>
             </select>
         </div>
         <div class="form-group">
@@ -32,18 +34,39 @@
                 maxlength="12" 
                 size="12"
                 placeholder="$">
-                {{!-- <small id="amountRequested" class="form-text text-muted help-text">Please read our <a href="#">Terms and Conditions and Privacy Policy</a></small> --}}
+                <small id="amountRequested" class="form-text text-muted help-text">Please enter an amount between $5,000 and $2,000,000</small>
         </div>
         <div class="form-group">
             <label for="industry">Industry</label>
             <select id="industry" class="form-control custom-select custom-select-md">
-                <option selected>Select</option>
-                <option value="1">Finance</option>
-                <option value="2">Automotive</option>
-                <option value="3">Creative</option>
-                <option value="4">Manufacturing</option>
-                <option value="5">Sales</option>
-                <option value="6">Marketing</option>
+                <option value="" >Select</option>
+                <option value="Advertising Agency">Advertising Agency</option>
+                <option value="Automotive">Automotive</option>
+                <option value="Bar/Nightclub">Bar/Nightclub</option>
+                <option value="Beauty/Nail Salon">Beauty/Nail Salon</option>
+                <option value="Civic and Social Associations">Civic and Social Associations</option>
+                <option value="Construction">Construction</option>
+                <option value="Distributor">Distributor</option>
+                <option value="Dry Cleaner">Dry Cleaner</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Flower Shop">Flower Shop</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Gas Station">Gas Station</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Home-based">Home-based</option>
+                <option value="Import/Export">Import/Export</option>
+                <option value="Internet-only">Internet-only</option>
+                <option value="Management Consultant">Management Consultant</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Retail">Retail</option>
+                <option value="Services">Services</option>
+                <option value="Specialty">Specialty</option>
+                <option value="Technology">Technology</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Wholesaler">Wholesaler</option>
+                <option value="Other">Other</option>
             </select>
         </div>
         <div class="form-group">

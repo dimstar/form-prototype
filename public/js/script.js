@@ -29,6 +29,12 @@ let FLAP = {
             FLAP.thereCanBeOnlyOne(this);
         } );
 
+        $('#industry').selectize({placeholder: "Select"});
+
+        $('select').on('change', function(){
+            $(this).addClass('selection')
+        })
+
         $("#activationCode").inputmask({"mask": "9999 9999 9999 9999", "placeholder": " "});
         $("#businessZip").inputmask({"mask": "99999", "placeholder": " "});
         $("#businessPhone").inputmask({"mask": "(999) 999-9999", "placeholder": " "});
